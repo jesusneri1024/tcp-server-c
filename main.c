@@ -21,6 +21,8 @@ void manejar_cliente(int cliente_fd)
             break;
         buffer[bytes] = '\0';
         printf("Cliente dice: %s", buffer);
+        printf("\n"); // Asegura el salto de línea
+
         send(cliente_fd, buffer, bytes, 0); // Eco
     }
 
